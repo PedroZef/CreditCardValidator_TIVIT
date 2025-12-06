@@ -55,9 +55,9 @@ A aplicação identifica as seguintes bandeiras de cartão de crédito com base 
 | Hipercard        | 6062                                     |
 | Elo              | 5067, 509, 6363, 650, 6516, 6550         |
 
-## OBSERVAÇÃO:  
 
-### Para sair do program !Clique Crtl+c ou OK no formulario
+**Observação:** 
 
+### Para sair do program [!Clique Crtl+c ou OK no formulario]
 
-**Observação:** A aplicação **não** valida o número do cartão de crédito (por exemplo, usando o algoritmo de Luhn) nem lida com informações de segurança como senhas ou códigos de segurança (CVV). A identificação é feita apenas com base nos dígitos iniciais do número do cartão.
+A aplicação **não** valida o número do cartão de crédito (por exemplo, usando o algoritmo de Luhn) nem lida com informações de segurança como senhas ou códigos de segurança (CVV). A identificação é feita apenas com base nos dígitos iniciais do número do cartão.
