@@ -1,0 +1,14 @@
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\bin\Debug\net8.0-windows\CreditCardValidator.exe
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\bin\Debug\net8.0-windows\CreditCardValidator.deps.json
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\bin\Debug\net8.0-windows\CreditCardValidator.runtimeconfig.json
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\bin\Debug\net8.0-windows\CreditCardValidator.dll
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\bin\Debug\net8.0-windows\CreditCardValidator.pdb
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\obj\Debug\net8.0-windows\CreditCardValidator.GeneratedMSBuildEditorConfig.editorconfig
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\obj\Debug\net8.0-windows\CreditCardValidator.AssemblyInfoInputs.cache
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\obj\Debug\net8.0-windows\CreditCardValidator.AssemblyInfo.cs
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\obj\Debug\net8.0-windows\CreditCardValidator.csproj.CoreCompileInputs.cache
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\obj\Debug\net8.0-windows\CreditCardValidator.dll
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\obj\Debug\net8.0-windows\refint\CreditCardValidator.dll
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\obj\Debug\net8.0-windows\CreditCardValidator.pdb
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\obj\Debug\net8.0-windows\CreditCardValidator.genruntimeconfig.cache
+D:\DIO_JAVA\Copilot_NET\CreditCardValidator\obj\Debug\net8.0-windows\ref\CreditCardValidator.dll
