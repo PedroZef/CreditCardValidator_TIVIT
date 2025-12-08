@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desafios\\Copilot_NET\\CreditCardValidator\\CreditCardValidator.csproj",
+      "projectUniqueName": "D:\\Desafios\\CreditCardValidator_TIVIT\\CreditCardValidator\\CreditCardValidator.csproj",
       "projectName": "CreditCardValidator",
-      "projectPath": "D:\\Desafios\\Copilot_NET\\CreditCardValidator\\CreditCardValidator.csproj",
+      "projectPath": "D:\\Desafios\\CreditCardValidator_TIVIT\\CreditCardValidator\\CreditCardValidator.csproj",
       "packagesPath": "C:\\Users\\zefpe\\.nuget\\packages\\",
-      "outputPath": "D:\\Desafios\\Copilot_NET\\CreditCardValidator\\obj\\",
+      "outputPath": "D:\\Desafios\\CreditCardValidator_TIVIT\\CreditCardValidator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zefpe\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,71 +1,68 @@
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+
+public class CreditCardBrandIdentifier
+{
+    // A ordem é importante para a correspondência, dos padrões mais específicos para os mais genéricos.
+    private static readonly List<(string Brand, string Pattern)> BrandPatterns = new List<(string, string)>
+    {
+        ("Hipercard", @"^(606282|384100|384140|384160)"),
+        ("Elo", @"^(401178|401179|431274|438935|451416|457393|457631|457632|504175|506699|5067|509|627780|636297|636368|65003|6504|6505|6507|6509|6516|6550)"),
+        ("Maestro", @"^(5018|5020|5038|5893|6304|6759|6761|6762|6763)"),
+        ("JCB", @"^35(2[8-9]|[3-8][0-9])"),
+        ("Diners Club", @"^3(0[0-5]|[689])"),
+        ("American Express", @"^3[47]"),
+        ("Discover", @"^(6011|64[4-9]|65)"),
+        ("UnionPay", @"^62"),
+        ("MasterCard", @"^(5[1-5]|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[0-1][0-9]|2720)"),
+        ("Visa", @"^4")
+    };
+
+    public string IdentifyBrand(string cardNumber)
+    {
+        if (string.IsNullOrWhiteSpace(cardNumber))
+        {
+            return "Número de cartão inválido";
+        }
+
+        string normalizedCardNumber = Regex.Replace(cardNumber, @"\D", "");
+
+        foreach (var (Brand, Pattern) in BrandPatterns)
+        {
+            if (Regex.IsMatch(normalizedCardNumber, Pattern))
+            {
+                return Brand;
+            }
+        }
+
+        return "Bandeira desconhecida";
+    }
+}
 
 public class Program
 {
     [STAThread]
     public static void Main(string[] args)
     {
+        var identifier = new CreditCardBrandIdentifier();
+
         while (true)
         {
-            Console.WriteLine("Aguardando entrada do número do cartão...");
-            string numeroCartao = Interaction.InputBox("Digite o número do cartão de crédito:", "Validador de Cartão de Crédito");
+            string numeroCartao = Interaction.InputBox("Digite o número do cartão de crédito (ou deixe em branco para sair):", "Validador de Cartão de Crédito", "");
 
             if (string.IsNullOrWhiteSpace(numeroCartao))
             {
                 break;
             }
 
-            string bandeiraCartao = IdentificarBandeiraCartao(numeroCartao);
-            Console.WriteLine($"Bandeira do cartão: {bandeiraCartao}");
+            string bandeiraCartao = identifier.IdentifyBrand(numeroCartao);
+            
+            Console.WriteLine($"Cartão: {numeroCartao} -> Bandeira: {bandeiraCartao}");
             MessageBox.Show($"Bandeira do cartão: {bandeiraCartao}", "Resultado");
         }
-    }
-
-    public static string IdentificarBandeiraCartao(string numeroCartao)
-    {
-        if (string.IsNullOrWhiteSpace(numeroCartao))
-        {
-            return "Número de cartão inválido";
-        }
-
-        // Remove caracteres não numéricos
-        string numeroCartaoNormalizado = Regex.Replace(numeroCartao, @"\D", "");
-
-        // Visa
-        if (Regex.IsMatch(numeroCartaoNormalizado, @"^4"))
-        {
-            return "Visa";
-        }
-        // MasterCard
-        else if (Regex.IsMatch(numeroCartaoNormalizado, @"^(5[1-5]|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[0-1][0-9]|2720)"))
-        {
-            return "MasterCard";
-        }
-        // American Express
-        else if (Regex.IsMatch(numeroCartaoNormalizado, @"^3[47]"))
-        {
-            return "American Express";
-        }
-        // Discover
-        else if (Regex.IsMatch(numeroCartaoNormalizado, @"^(6011|65|64[4-9])"))
-        {
-            return "Discover";
-        }
-        // Hipercard
-        else if (Regex.IsMatch(numeroCartaoNormalizado, @"^6062"))
-        {
-            return "Hipercard";
-        }
-        // Elo
-        else if (Regex.IsMatch(numeroCartaoNormalizado, @"^(5067|509|6363|650|6516|6550)"))
-        {
-            return "Elo";
-        }
-
-        return "Bandeira desconhecida";
     }
 }
 
