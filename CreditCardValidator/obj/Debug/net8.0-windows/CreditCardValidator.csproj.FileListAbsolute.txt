@@ -27,3 +27,6 @@ D:\Desafios\CreditCardValidator_TIVIT\CreditCardValidator\obj\Debug\net8.0-windo
 D:\Desafios\CreditCardValidator_TIVIT\CreditCardValidator\obj\Debug\net8.0-windows\CreditCardValidator.pdb
 D:\Desafios\CreditCardValidator_TIVIT\CreditCardValidator\obj\Debug\net8.0-windows\CreditCardValidator.genruntimeconfig.cache
 D:\Desafios\CreditCardValidator_TIVIT\CreditCardValidator\obj\Debug\net8.0-windows\ref\CreditCardValidator.dll
+D:\Desafios\CreditCardValidator_TIVIT\CreditCardValidator\bin\Debug\net8.0-windows\resources\img\base.png
+D:\Desafios\CreditCardValidator_TIVIT\CreditCardValidator\bin\Debug\net8.0-windows\resources\img\Cartões_Novos.png
+D:\Desafios\CreditCardValidator_TIVIT\CreditCardValidator\bin\Debug\net8.0-windows\resources\slogan.jpg

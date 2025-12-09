@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
+namespace CreditCardValidator;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 public class CreditCardBrandIdentifier
 {
@@ -47,14 +44,33 @@ public class Program
     [STAThread]
     public static void Main(string[] args)
     {
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        // A splash screen é executada e, quando se fecha, a execução continua.
+        Application.Run(new FormScreen());
+
         var identifier = new CreditCardBrandIdentifier();
 
         while (true)
         {
-            string numeroCartao = Interaction.InputBox("Digite o número do cartão de crédito (ou deixe em branco para sair):", "Validador de Cartão de Crédito", "");
+            string numeroCartao;
+            using (var inputForm = new InputForm("Validador de Cartão de Crédito", "Digite o número do cartão de crédito (ou deixe em branco para sair):"))
+            {
+                var result = inputForm.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    numeroCartao = inputForm.InputValue;
+                }
+                else
+                {
+                    // O usuário clicou em Cancelar ou fechou o formulário
+                    break;
+                }
+            }
 
             if (string.IsNullOrWhiteSpace(numeroCartao))
             {
+                // Se o usuário clicar em OK com a caixa vazia, saia do loop.
                 break;
             }
 
@@ -65,4 +81,3 @@ public class Program
         }
     }
 }
-

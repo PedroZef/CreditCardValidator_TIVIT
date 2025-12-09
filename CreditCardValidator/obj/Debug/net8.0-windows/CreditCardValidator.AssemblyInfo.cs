@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CreditCardValidator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29d962eb606187049db44f4c1b66e3fb3b07e90d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+680338b63f4f4c4c25f7796b76b5b6aa2501695f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CreditCardValidator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CreditCardValidator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
