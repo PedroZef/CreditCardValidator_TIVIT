@@ -12,7 +12,9 @@ A aplicação utiliza uma interface gráfica para a entrada de dados. Ao ser exe
 4. O resultado será exibido em uma caixa de mensagem com o título "Resultado".
 5. A aplicação continuará pedindo novos números de cartão até que o formulário de entrada seja fechado ou cancelado.
 
-6. ## ![Imagem da instrução](./CreditCardValidator/obj/img/base.png)
+6. ## ![Imagem da instrução](./CreditCardValidator/resources/img/base.png)
+
+7.  ## ![Imagem da instrução](./CreditCardValidator/resources/slogan.jpg) 
 
 ## Tecnologias Utilizadas
 
